@@ -12,7 +12,7 @@ Implement a secure authentication system to allow users to sign up or log in to 
 Incorporate OAuth functionality to provide a seamless onboarding experience for users, allowing them to sign up or log in using their existing social media or email accounts.
 
 **3. User Input Form:**
-Design a user-friendly form where users can input essential details such as their name, location, frequency of scrap pickup, and whether they are an individual or an enterprise. Additionally, include an option for users to select a membership period, offering them better quotes as an incentive for commitment.
+Design a user-friendly form where users can input essential details such as their name, location, frequency of scrap pickup, and also which scrap they want us to pick - like lead batteries, plastic or PET bottles etc, and whether they are an individual or an enterprise. Additionally, include an option for users to select a membership period, offering them better quotes as an incentive for commitment.
 
 **4. Admin Panel:**
 Develop an intuitive Admin Panel that provides administrators with insights into user registrations and data analysis capabilities. The Admin Panel should include the following features:
