@@ -5,7 +5,7 @@ We propose the development of a Scrap Pickup Management System, aimed at streaml
 
 **2. Features to be Added:**
 
-1. **Login/SignUp Sign-in:**
+**1. Login/SignUp Sign-in:**
 Implement a secure authentication system to allow users to sign up or log in to the platform, ensuring data security and user privacy.
 
 **2. OAuth Functionality for Smooth Onboarding:**
