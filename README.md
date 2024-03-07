@@ -18,7 +18,9 @@ Design a user-friendly form where users can input essential details such as thei
 Develop an intuitive Admin Panel that provides administrators with insights into user registrations and data analysis capabilities. The Admin Panel should include the following features:
 
 **User Registration Overview:** Display the total number of registered users, categorized by individual and enterprise customers.
+
 **Data Filtering:** Implement filters based on the frequency of scrap pickups, geo-location, and user category (individual or enterprise). Allow administrators to filter data based on a combination of these parameters.
+
 **Visual Representation:** Utilize visual representations such as pie charts, line charts, or any suitable graphical format to present data analysis results. Visual representations enhance data comprehension and provide a more appealing user experience.
 
 **3. Conclusion:**
