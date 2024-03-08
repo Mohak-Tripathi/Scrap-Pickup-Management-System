@@ -52,6 +52,18 @@ This policy ensures a balance between user flexibility and operational efficienc
 **3.3. Spamming by Wrong Address:**
 In the unfortunate event of a user attempting to spam the system by providing incorrect pickup locations through multiple accounts, it is imperative to implement measures to detect and mitigate such fraudulent activities.
 
+**3.4. Incorrect Scrap Identification:**
+Users may misidentify or inaccurately describe the type of scrap they have for pickup, leading to confusion or inefficiencies in the collection process.
+**Solution:** Implement clear guidelines or visual aids to assist users in accurately identifying and categorizing their scrap materials during the pickup request process.
+
+**3.5. Traffic or Route Optimization Issues:**
+Scrap pickup personnel may encounter unexpected traffic delays or inefficient routing, causing delays in pickups or missed appointments.
+**Solution:** Integrate real-time traffic data and route optimization algorithms into the system to dynamically adjust pickup schedules and routes based on current conditions.
+
+**3.6 Communication Breakdowns:**
+Miscommunication between users, pickup personnel, and administrators could lead to missed pickups, scheduling conflicts, or inaccurate data entry.
+**Solution:** Establish clear communication channels, such as email notifications, SMS alerts, or in-app messaging, to ensure timely and accurate communication among stakeholders.
+
 **Solutions:**
 
 **1. Address Verification:** Implement a robust address verification system to ensure the accuracy of provided pickup locations. This could involve cross-referencing user-provided addresses with verified databases or employing geolocation services to confirm the validity of addresses.
