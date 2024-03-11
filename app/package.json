@@ -3,21 +3,27 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "DEBUG=app.* nodemon ./bin/www",
-    "build:css": "npx tailwindcss build -i tailwind.css -o public/stylesheets/style.css",
+    "start": "node ./index.js",
+    "dev": "DEBUG=app.* nodemon ./index.js",
+    "build:css": "npx postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css",
     "build:repo": "npx prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.10.2",
+    "autoprefixer": "^10.4.18",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.4.5",
     "express": "~4.16.1",
+    "express-session": "^1.18.0",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
+    "method-override": "^3.0.0",
     "morgan": "~1.9.1",
-    "tailwind": "^4.0.0"
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.0",

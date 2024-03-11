@@ -1,5 +1,5 @@
 ### steps to run the app
-0. create `prisma/.env` file and add the database
+0. create `.env` file in app route and add the database
 ```
 DATABASE_URL="file:./app.db"
 ```
