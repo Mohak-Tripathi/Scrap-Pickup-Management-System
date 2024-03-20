@@ -1,0 +1,97 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+
+// PS C:\v-align-projects\scrap-management> npx prisma init
+
+//✔ Your Prisma schema was created at prisma/schema.prisma
+//  You can now open it in your favorite editor.
+
+//Next steps:
+//1. Set the DATABASE_URL in the .env file to point to your existing database. If your database has no tables yet, read https://pris.ly/d/getting-started
+//2. Set the provider of the datasource block in schema.prisma to match your database: postgresql, mysql, sqlite, sqlserver, mongodb or 
+//cockroachdb.
+//3. Run prisma db pull to turn your database schema into a Prisma schema.
+//4. Run prisma generate to generate the Prisma Client. You can then start querying your database.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+
+model User {
+  id    Int     @default(autoincrement()) @id
+  email String  @unique
+  username String
+  password String
+  last_logged_in DateTime @default(now())
+  is_active Boolean @default(true)
+  profile UserProfile?
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+
+}
+
+
+
+model UserProfile {
+  user_profile_id  Int       @default(autoincrement()) @id 
+  first_name       String 
+  last_name        String
+  avatar_id         String 
+  identity_proof   String
+  user   User @relation(fields: [userId], references: [id])
+  userId Int  @unique 
+  address   Address[] 
+  // uploaded_resources User_Resources_Structure[]
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+ 
+}
+
+model Address {
+  address_id       Int       @default(autoincrement()) @id 
+  address_line     String
+  user_address UserProfile @relation(fields: [user_address_id], references: [user_profile_id])
+  user_address_id Int
+
+}
+
+
+//Read about index
+
+// internaliuzation
+//    responseMessage: "User is successfully logged in.",
+          //  responseCode: 30007,
+
+
+
+
+
+
+// model User_Resources_Structure {
+//     id Int @default(autoincrement()) @id 
+//     relative_path String 
+//     format  Format
+//     size Int 
+//     is_active Boolean
+//     customer_resources UserProfile @relation(fields: [customer_resources_id], references: [user_profile_id])
+//     customer_resources_id Int
+//     created_at DateTime  @default(now())
+//     updated_at DateTime  @updatedAt
+// }
+
+enum Format {
+    PDF
+    PNG
+    JPG
+}
